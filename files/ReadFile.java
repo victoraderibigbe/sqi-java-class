@@ -35,6 +35,9 @@ public class ReadFile {
             System.out.println("File not found");
             e.printStackTrace();
         } catch (IOException e) {
+            System.out.println("Failed to read file");
+            e.printStackTrace();
+        } catch (Exception e) {
             System.out.println("Something went wrong");
             e.printStackTrace();
         }

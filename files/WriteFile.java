@@ -41,9 +41,13 @@ public class WriteFile {
             if (this.file.createNewFile()) {
                 System.out.println(file.getName() + " " + "has been created.");
             } else {
-                System.out.println("File could not be created");
+                System.out.println("Failed to create file");
             }
         } catch (IOException e) {
+            System.out.println("Failed to create file");
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Something went wrong");
             e.printStackTrace();
         }
     }
@@ -60,6 +64,10 @@ public class WriteFile {
             bw.write(text);
             bw.close();
         } catch (IOException e) {
+            System.out.println("Failed to write file");
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Something went wrong");
             e.printStackTrace();
         }
     }
